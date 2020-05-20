@@ -34,7 +34,7 @@ def amorphous_lattic_thermal(v,n,temperature):
     theta = cutoff_frequency(v,n)
     integrat_datas = frequency_integral(theta,temperature)
     
-    klmin = np.power(pi/6,1/3)*kB*np.power(n,2/3)*np.sum(sound_modes*np.array(temperature/theta)*integrat_datas)
+    klmin = np.power(pi/6,1/3)*kB*np.power(n,2/3)*np.sum(sound_modes*np.power(temperature/theta,2)*integrat_datas)
     return klmin
     
 
