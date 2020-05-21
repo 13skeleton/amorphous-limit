@@ -1,0 +1,30 @@
+#基本设置
+Sample_Name: Bi0.3Sb1.7Te3-cross-plane #样品名称，无实际意义，仅为区分
+#声频支声速总共有三种模式，分为1个纵波声速和2个横波声速。常规声速测试测得的横波声速为平均值纵波声速和横波声速 (默认)
+Logitudinal_Sound_Velocity: 2372 #纵波声速 unit: m/s
+Transverse_Sound_Velocity: 1483 #横波声速 unit: m/s
+
+#声频支声速总共有三种模式，分为1个纵波声速和2个横波声速。常规声速测试测得的横波声速为平均值，如可以知道两种横波各自的值的话可以设置如下结果。(可选)
+#Sound_Modes: 7160.305,4250.755,4250.755   #分别代表纵波声速，横波声速1,横波声速2.
+
+
+#求取原子数密度(平均原子体积的倒数)
+
+#对于求原子数密度可以通过密度和相对原子质量求得，这种方案是推荐的解决思路。(默认)
+Sample_Density: 4.85   #样品的密度 unit: g/cm^3
+Relative_Atomic_Mass: 652.469 #化学式中的相对原子质量 g/mol
+Number_Atoms: 5  #化学式中的原子数目
+
+#如果确实不知道密度和相对原子质量，如果知道单胞体积，也可求得原子数密度。(可选)
+#Volume_Cell: 169.23  #单胞体积 unit: A^3
+#Number_Atoms_in_Cell: 5  #单胞中原子数目
+
+#如果知道平均原子体积，后续的样品密度，化学式中的相对原子质量，单胞体积等都可设置为注释。
+#Average_Atomic_Volume: 33.846  #单位: A^3
+
+
+Temperature:
+    Start_Temperature: 300  #起始温度 单位: K
+    End_Temperature: 800    #终止温度 单位: K
+    Interval_Temperature: 1 # 温度间隔 单位: K
+
